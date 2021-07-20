@@ -1,6 +1,5 @@
 package com.vova7865.ftbdownloader;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -17,11 +16,6 @@ import com.vova7865.ftbdownloader.utils.HashUtils;
 import com.vova7865.ftbdownloader.utils.Side;
 
 public class ModPackDownloader {
-	public static void main(String[] args) {
-		search("revelation");
-		start(35, "latest", Side.SERVER, ".", false);
-	}
-
 	public static void search(String term) {
 		FTBApi client = new FTBApi("https://api.modpacks.ch/");
 		ModpackSearchResult result = client.searchForModpacks(term);
